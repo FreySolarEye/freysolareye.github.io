@@ -44,7 +44,7 @@ Now that we have downloaded it let's make a workplace for it :
 
 First things first we need to run ``binwalk`` on our .bin fimrware image: 
 
-<img src="{{ site.baseurl }}/assets/images/RE/assets/images/RE/2021-11-27_23-51_binwalk.png">
+<img src="{{ site.baseurl }}/assets/images/RE/2021-11-27_23-51_binwalk.png">
 
 As you can see, this image consists of two parts: An LZMA compressed file (compare to a .zip or .rar file) and a SquashFS Filesystem, common for compressing a Linux or Unix OS into small space. It's important to make a note that the LZMA file starts at byte 0 (or 0x0 in hexadecimal) and fills up in size to an unknown length, while the SquashFS filesystem is located at byte 955740 (or 0xE955C in hexadecimal).
 
@@ -63,12 +63,12 @@ Before we get the SquasFS we need to install sasquatch, so we can automate the p
  
 Executing the command : ``binwalk --extract tclinux.bin -1``
 
- <img src="{{ site.baseurl }}/assets/images/RE/assets/images/RE/2021-11-28_00-36_binwalk_preserve.png">
+ <img src="{{ site.baseurl }}/assets/images/RE/2021-11-28_00-36_binwalk_preserve.png">
 
   And finally we can see that we have successfully extracted the squashFS system
 
 
-<img src="{{ site.baseurl }}/assets/images/RE/assets/images/RE/2021-11-28_00-38_squash_ex.png">
+<img src="{{ site.baseurl }}/assets/images/RE/2021-11-28_00-38_squash_ex.png">
 
   A little bit explanation on what does the command argument ``-1`` does on binwalk, the specific argument allows us to extract every symlink that it's supposed to be inside of the  squashFS system. By default it does not extract the symlinked files for obvious reasons.
 
