@@ -37,7 +37,7 @@ Now that we have downloaded it let's make a workplace for it :
     4. The unzipped files should be : tclinux.bin
 
 
-![image](/assets/images/RE/2021-11-27_23-43_ls.png)
+<img src="{{ site.baseurl }}/assets/images/RE/2021-11-27_23-43_ls.png">
 
 
 
