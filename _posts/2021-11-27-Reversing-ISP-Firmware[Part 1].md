@@ -50,7 +50,7 @@ As you can see, this image consists of two parts: An LZMA compressed file (compa
 
 **Getting that SquashFS**
 
-Before we get the SquasFS we need to install sasquatch, so we can automate the procedure be combining it with ``binwalk`` :
+Before we get the SquasFS we need to install sasquatch, so we can automate the procedure by combining it with ``binwalk`` :
 
  {% highlight bash %}
    1. git clone https://github.com/devttys0/sasquatch.git
