@@ -65,7 +65,7 @@ plugins:
 author:
   name   : "Frey"
   avatar : "/assets/images/Avatar.png"
-  bio    : "Devops & Pentester, CTF player<br>HackTheBox Analogia"
+  bio    : "DevOps & Pentester, CTF player<br>HackTheBox Analogia"
   github: "FreySolarEye"
   
 
