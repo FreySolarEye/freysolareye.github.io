@@ -7,7 +7,7 @@ categories: RE
 
 **Introduction**
 
-A few days i ago i decided that i want to reverse engineer one of my ISP's routers, specifically the ZTE Router Models. Why would i do that? Well because it's fun messing around with custom firmwares. 
+A few days ago i decided that i want to reverse engineer one of my ISP's routers, specifically the ZTE Router Models. Why would i do that? Well because it's fun messing around with custom firmwares. 
 
 **Disclaimer**
 
