@@ -1,5 +1,5 @@
 ---
-title: "Reversing ISP Router Fimrware [Part 1]"
+title: "Reversing ISP Router Firmware [Part 1]"
 date: "2021-11-27"
 tags: reverse,firmware
 categories: RE
