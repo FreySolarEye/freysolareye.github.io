@@ -21,6 +21,13 @@ github_username: FreySolarEye
 minimal_mistakes_skin: dark
 search: true
 
+##Base Urls
+
+
+url: https://freysolareye.github.io
+repository: "FreySolarEye/freysolareye.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+baseurl: "/"
+
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
