@@ -46,7 +46,7 @@ First things first we need to run ``binwalk`` on our .bin fimrware image:
 
 <img src="{{ site.baseurl }}/assets/images/RE/2021-11-27_23-51_binwalk.png">
 
-As you can see, this image consists of two parts: An LZMA compressed file (compare to a .zip or .rar file) and a SquashFS Filesystem, common for compressing a Linux or Unix OS into small space. It's important to make a note that the LZMA file starts at byte 0 (or 0x0 in hexadecimal) and fills up in size to an unknown length, while the SquashFS filesystem is located at byte 955740 (or 0xE955C in hexadecimal).
+As you can see, this image consists of two parts: An LZMA compressed file (compare to a .zip or .rar file) and a SquashFS Filesystem, common for compressing a Linux or Unix OS into small space. It's important to make a note that the LZMA file starts at byte 256 (or 0x100 in hexadecimal) and fills up in size to an unknown length, while the SquashFS filesystem is located at byte 955740 (or 0xE955C in hexadecimal).
 
 **Getting that SquashFS**
 
