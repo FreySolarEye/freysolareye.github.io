@@ -18,7 +18,7 @@ This is strictly for educational purposes <b>ONLY</b> and not be used for conduc
 
   * Router Firmware [ ZTE H108NS ]
   * A Linux/Unix Computer or Virtual Machine
-  * An installed copy of ``dd``, ``binwalk``, and ``lzma``
+  * An installed copy of ``binwalk``
   * Optional: John the Reaper, Hashcat
 
 **Download the Firmware**
