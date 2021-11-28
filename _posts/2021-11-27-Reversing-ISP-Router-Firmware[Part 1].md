@@ -76,7 +76,7 @@ Executing the command : ``binwalk --extract tclinux.bin -1``
 
   **And now what? Is there something else there?**
 
-  Now that you have pretty much full access to the whole squasFS system you can tinker it as you please, what i would do in my case is to look for default credentials on services, or files and then i would setup a testing environment with  <b>firmadyne</b> and emulate the Router's firmware in order to find vulnerabilities, or bypass restrictions. Finally you can use the <b>mod-firmware-kit</b> to re-pack the whole image file with a backdoor or tweak it as you like.
+  Now that you have pretty much full access to the whole squasFS system you can tinker it as you please, what i would do in my case is to look for default credentials on services, or files and then i would setup a testing environment with  <b>firmadyne</b> and emulate the Router's firmware in order to find vulnerabilities, or bypass restrictions. Υou can also use the <b>mod-firmware-kit</b> to re-pack the whole image file with a backdoor or tweak it as you like.
 
   Resources for both of the tools : 
 
