@@ -80,8 +80,8 @@ Executing the command : ``binwalk --extract tclinux.bin -1``
 
   Resources for both of the tools : 
 
-  Firmadyne : <a href="https://github.com/firmadyne/firmadyne" > Firmadyne</a><br>
-  Firmware-Mod-Kit : <a href="https://www.kali.org/tools/firmware-mod-kit/" > Firmware-Mod-Kit</a> 
+  Firmadyne : <a href="https://github.com/firmadyne/firmadyne" target="_blank" > Firmadyne</a><br>
+  Firmware-Mod-Kit : <a href="https://www.kali.org/tools/firmware-mod-kit/" target="_blank" > Firmware-Mod-Kit</a> 
 
 
   **Summary**
