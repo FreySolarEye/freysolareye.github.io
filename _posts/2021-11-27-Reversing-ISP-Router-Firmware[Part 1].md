@@ -1,11 +1,12 @@
 ---
 title: "Reversing ISP Router Firmware [Part 1]"
 date: "2021-11-27"
+header:
+  teaser: /assets/images/RE/IoT_Base.png
+  teaser_home_page: true
 tags: reverse,firmware
 categories: RE
 ---
-
-**Introduction**
 
 A few days ago i decided that i want to reverse engineer one of my ISP's routers, specifically the ZTE Router Models. Why would i do that? Well because it's fun messing around with custom firmwares. 
 
