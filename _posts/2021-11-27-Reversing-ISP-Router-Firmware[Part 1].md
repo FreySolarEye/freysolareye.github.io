@@ -12,7 +12,7 @@ A few days ago i decided that i want to reverse engineer one of my ISP's routers
 
 **Disclaimer**
 
-This is strictly for educational purposes <b>ONLY</b> and not be used for conducting any illegal activities. I hold no responsibility for misuse of this information.
+This is strictly for educational purposes <b>ONLY</b> and not to be used for conducting any illegal activities. I hold no responsibility for misuse of this information.
 
 
 **Requirments**
@@ -43,7 +43,7 @@ Now that we have downloaded it let's make a workplace for it :
 
 
 
-First things first we need to run ``binwalk`` on our .bin fimrware image: 
+First things first we need to run ``binwalk`` on our .bin firmware image: 
 
 <img src="{{ site.baseurl }}/assets/images/RE/2021-11-27_23-51_binwalk.png">
 
@@ -60,7 +60,7 @@ Before we get the SquasFS we need to install sasquatch, so we can automate the p
 
 {% endhighlight %}
 
- After everything is ready, we can finally execute binwalk with the help of sasquatch.
+ When everything is ready, we can finally execute binwalk with the help of sasquatch.
  
 Executing the command : ``binwalk --extract tclinux.bin -1``
 
@@ -76,7 +76,7 @@ Executing the command : ``binwalk --extract tclinux.bin -1``
 
   **And now what? Is there something else there?**
 
-  Now that you have pretty much full access to the whole squasFS system you can tinker it as you please, what i would do in my case is to look for default credentials on services, or files and then i would setup a testing environment with  <b>firmadyne</b> and emulate the Router's firmware in order to find vulnerabilities, or bypass restrictions. Υou can also use the <b>mod-firmware-kit</b> to re-pack the whole image file with a backdoor or tweak it as you like.
+  Now that you have pretty much full access to the whole squasFS system you can tinker it as you please, what i would personally  do in my case is to look for default credentials on services, or files and then i would setup a testing environment with  <b>firmadyne</b> and emulate the Router's firmware in order to find vulnerabilities, or bypass restrictions. Υou can also use the <b>mod-firmware-kit</b> to re-pack the whole image file with a backdoor or tweak it as you like.
 
   Resources for both of the tools : 
 
