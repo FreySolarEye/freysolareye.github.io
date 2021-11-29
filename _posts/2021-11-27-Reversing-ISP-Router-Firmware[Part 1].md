@@ -6,29 +6,37 @@ header:
   teaser_home_page: true
 tags: reverse,firmware
 categories: RE
+toc: true
+toc_sticky: true
+toc_label: "Table of Contents"
 ---
+
 
 A few days ago i decided that i want to reverse engineer one of my ISP's routers, specifically the ZTE Router Models. Why would i do that? Well because it's fun messing around with custom firmwares. 
 
-**Disclaimer**
+# Disclaimer 
+{:.no_toc}
 
 This is strictly for educational purposes <b>ONLY</b> and not to be used for conducting any illegal activities. I hold no responsibility for misuse of this information.
 
 
-**Requirments**
+# Requirments
+{:.no_toc}
 
   * Router Firmware [ ZTE H108NS ]
   * A Linux/Unix Computer or Virtual Machine
   * An installed copy of ``binwalk``
   * Optional: John the Reaper, Hashcat
 
-**Download the Firmware**
+# Downloading the Firmware
+{:.no_toc}
 
 First, we need to download the firmware to begin reverse engineering it.
 
 Download Link : <a href="https://help.cosmote.gr/system/templates/selfservice/gnosisgr/Files2/ZTE_H108NS_CONNX_PSTN_V107u_ZRD_GR2_A68_20150720_tclinux.rar" > ZTE-H108NS</a>
 
-**Digging into the Firmware** 
+# Digging into the Firmware
+{:.no_toc}
 
 Now that we have downloaded it let's make a workplace for it : 
 
@@ -49,7 +57,8 @@ First things first we need to run ``binwalk`` on our .bin firmware image:
 
 As you can see, this image consists of two parts: An LZMA compressed file (compare to a .zip or .rar file) and a SquashFS Filesystem, common for compressing a Linux or Unix OS into small space. It's important to make a note that the LZMA file starts at byte 256 (or 0x100 in hexadecimal). While the SquashFS filesystem is located at byte 955740 (or 0xE955C in hexadecimal).
 
-**Getting that SquashFS**
+# Getting that SquashFS
+{:.no_toc}
 
 Before we get the SquasFS we need to install sasquatch, so we can automate the procedure by combining it with ``binwalk`` :
 
@@ -74,7 +83,8 @@ Executing the command : ``binwalk --extract tclinux.bin -1``
   A little bit explanation on what does the command argument ``-1`` does on binwalk, the specific argument allows us to extract every symlink that it's supposed to be inside of the  squashFS system. By default it does not extract the symlinked files for obvious reasons.
 
 
-  **And now what? Is there something else there?**
+# And now what? Is there something else there?
+ {:.no_toc}
 
   Now that you have pretty much full access to the whole squasFS system you can tinker it as you please, what i would personally  do in my case is to look for default credentials on services, or files and then i would setup a testing environment with  <b>firmadyne</b> and emulate the Router's firmware in order to find vulnerabilities, or bypass restrictions. Υou can also use the <b>mod-firmware-kit</b> to re-pack the whole image file with a backdoor or tweak it as you like.
 
@@ -84,6 +94,7 @@ Executing the command : ``binwalk --extract tclinux.bin -1``
   Firmware-Mod-Kit : <a href="https://www.kali.org/tools/firmware-mod-kit/" target="_blank" > Firmware-Mod-Kit</a> 
 
 
-  **Summary**
+# Summary
+ {:.no_toc}
 
   It was fun reversing this one, as it was easy and straightforward, on  <b>Part[2]</b> we will focus on how we can setup a testing environment with firmadyne and emulate our extracted firmware.
