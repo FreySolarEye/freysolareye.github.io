@@ -7,7 +7,7 @@ header:
 tags: reverse,firmware
 categories: RE
 toc: true
-toc_sticky: true
+toc_sticky: false
 toc_label: "Table of Contents"
 ---
 
