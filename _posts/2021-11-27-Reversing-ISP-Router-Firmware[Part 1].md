@@ -20,7 +20,7 @@ A few days ago i decided that i want to reverse engineer one of my ISP's routers
 This is strictly for educational purposes <b>ONLY</b> and not to be used for conducting any illegal activities. I hold no responsibility for misuse of this information.
 
 
-# Requirments
+# Requirements
 {:.no_toc}
 
   * Router Firmware [ ZTE H108NS ]
