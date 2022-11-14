@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: "freysolareye.github.io"
 email: "info@freysolareye.io"
-description: "Cyber Security & CTF Blog"
+description: "Cyber Security Blog"
 #twitter_username: username
 github_username: FreySolarEye
 minimal_mistakes_skin: dark
@@ -65,7 +65,7 @@ plugins:
 author:
   name   : "Frey"
   avatar : "/assets/images/Avatar.png"
-  bio    : "DevOps & Pentester, CTF player<br>HackTheBox Analogia"
+  bio    : "Penetration Tester. Est. 1998. <br>Currently in the military fyi Hellenic DoD. <br>Vulnerability Research Hobbyist. Opinions are my own."
   location: "Greece"
   github: "FreySolarEye"
   keybase: "freysolareye"
