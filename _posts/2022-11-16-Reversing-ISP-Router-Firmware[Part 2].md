@@ -146,4 +146,4 @@ On the router shell environment let's execute the below command :
 # Summary
 {:.no_toc}
 
-We've successfully emulated our router firmware using out of the box tools, perfomred dynamic analysis inside the emulated running state of the firmware. Thinked out of the box techniques and applied them to tinker with mechanisms and finally getting access inside the Router Web Portal. On <a href="Part[3]" > Part[ 3 ]</a> we will be talking on how we can find and analyse vulnerabilities or who knows fuzzing for some Bofs too;
+We've successfully emulated our router firmware using out of the box tools, perfomred dynamic analysis inside the emulated running state of the firmware. Thinked outside of the box techniques and applied them to tinker with mechanisms and finally getting access inside the Router Web Portal. On <a href="Part[3]" > Part[ 3 ]</a> we will be talking on how we can find and analyse vulnerabilities or who knows fuzzing for some Bofs too;
