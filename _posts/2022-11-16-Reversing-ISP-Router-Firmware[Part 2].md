@@ -65,6 +65,7 @@ And finally we have a **/bin/sh** shell inside
 
 
 # Debugging Romfile.cfg
+{:.no_toc}
 
 Romfile.cfg is a piece of file that holds the basic configuration of the Router, latest firmwares encrypt this file on the runtime so third party operatos  would never be able to achieve reading the none encrypted version of it without having the  original extracted firmware or a flash dump directly from the Router ROM. From our point of view the **romfile.cfg** is unencrypted and we can view the contents of it directly.
 
@@ -83,10 +84,12 @@ But testing them on the Basic Auth web panel of the router shows that they're in
 
 
 # What is Βoa
+{:.no_toc}
 
 A little bit information about boa, Boa is a discontinued since 2005 open-source small-footprint web server that is suitable for embedded applications. To simplify  things up it's just a web based client which serves basic content with minimal security policies.
 
 # Debugging Boa Configuration
+{:.no_toc}
 
 Now that we're inside the Router environment we can take a look how Boa is being executed and what configuration does it parses, to do that we're gonna list our current processes and grep through our way to locate Boa process.
 
@@ -107,6 +110,7 @@ On the router shell environment let's execute the below command :
     #Auth /  /etc/passwd
 
 # Manipulating Basic Authentication Mechanism
+{:.no_toc}
 
   Viewing the contents of **/etc/passwd**  clearly states that there's a user called **admin** which has a valid **/bin/sh** shell and permissions as **UID 0** which leads to root permission access. Here's the output of the **/etc/passwd**
 
@@ -133,11 +137,13 @@ On the router shell environment let's execute the below command :
 </p>
 
 ## Keynotes
+{:.no_toc}
 
 1. Always perform Dynamic / Static analysis on the firmware beforehand
 2. Taking a look around  and list current proccesses may give you a good insight on how the underlying system works
 3. Thinking outside of the box and tinkering with software mechanisms when it's necessary
 
 # Summary
+{:.no_toc}
 
 We've successfully emulated our router firmware using out of the box tools, perfomred dynamic analysis inside the emulated running state of the firmware. Thinked out of the box techniques and applied them to tinker with mechanisms and finally getting access inside the Router Web Portal. On <a href="Part[3]" > Part[ 3 ]</a> we will be talking on how we can analyse and find vulnerabilities or who knows fuzzing for some Bofs too;
