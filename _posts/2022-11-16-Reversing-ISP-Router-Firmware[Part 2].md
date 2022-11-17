@@ -11,7 +11,7 @@ toc_sticky: false
 toc_label: "Table of Contents"
 ---
 
-It's been a year since i have posted the <a href="https://freysolareye.github.io/re/Reversing-ISP-Router-Firmware-Part-1/" > **Part[ 1 ]**</a> of the Reverse Engineering series mainly because iam in the military; oh well anyway, the  <a href="https://freysolareye.github.io/re/Reversing-ISP-Router-Firmware-Part-2/" > **Part[ 2 ]**</a>  will be focusing on emulating the firmware. We will be using some out of the box tools to make our lives and debugging easier. Note to the viewers  <a href="https://freysolareye.github.io/re/Reversing-ISP-Router-Firmware-Part-2/" > **Part[ 2 ]**</a> highlights the emulation therefore it's assumed that every tool and firmware that it's being shown here is downloaded & installed.
+It's been a year since I have posted  <a href="https://freysolareye.github.io/re/Reversing-ISP-Router-Firmware-Part-1/" > **Part[ 1 ]**</a> of the Reverse Engineering series mainly because Iam in the military; oh well anyway, <a href="https://freysolareye.github.io/re/Reversing-ISP-Router-Firmware-Part-2/" > **Part[ 2 ]**</a>  will be focusing on emulating the firmware. We will be using some out of the box tools to make our lives and debugging easier. Note to the viewers  <a href="https://freysolareye.github.io/re/Reversing-ISP-Router-Firmware-Part-2/" > **Part[ 2 ]**</a> highlights the emulation therefore it's assumed that every tool and firmware that is  shown here is downloaded & installed.
 
 # Disclaimer 
 {:.no_toc}
@@ -43,7 +43,7 @@ What we need to do first is use FirmAE to check if we can emulate the firmware, 
 <img src="{{ site.baseurl }}/assets/images/RE/2022-11-16_00-36.png">
 
 
-As we can see the emulation works perfectly and we're granted with a Network Interface  which leads to a web page asking as for Basic Auth credentials. Therefore we're one step closer to view the router web panel. Before we can do that we need the credentials but we don't have them so we need to dig a little deeper into the firmware from the inside in order to uncover or better; Manipulate some things to get past the Basic Auth. 
+As we can see the emulation works perfectly and we're granted with a Network Interface  which leads to a web page asking us for Basic Auth credentials. Therefore we're one step closer viewing the router web panel. Before we can do that we need the credentials but we don't have them so we need to dig a little deeper into the firmware from the inside in order to uncover or better; Manipulate some things to get past the Basic Auth. 
 
 
 # Debugging the Firmware
@@ -57,7 +57,7 @@ Let's execute the needed commands :
     2. ls -la /tmp/ |grep qemu 
     3. sudo ./debugger.py 1
 
-In my case the qemu session is on number 1, after executing it by default the script will try to  connect to the session with Netcat, but it will fail. In order to get a solid shell inside we need to choose the option **Socat** so input the number **1** 
+In my case the qemu session is in number 1. After executing it by default the script will try to  connect to the session with Netcat, but it will fail. In order to get a solid shell inside we need to choose the option **Socat** so input the number **1** 
 
 And finally we have a **/bin/sh** shell inside 
 
@@ -67,11 +67,11 @@ And finally we have a **/bin/sh** shell inside
 # Debugging Romfile.cfg
 {:.no_toc}
 
-Romfile.cfg is a piece of file that holds the basic configuration of the Router, latest firmwares encrypt this file on the runtime so third party operatos  would never be able to achieve reading the none encrypted version of it without having the  original extracted firmware or a flash dump directly from the Router ROM. From our point of view the **romfile.cfg** is unencrypted and we can view the contents of it directly.
+Romfile.cfg is a piece of file that holds the basic configuration of the Router, latest firmwares encrypt this file on the runtime so third party operators  would never be able to achieve reading the non encrypted version of it without having the  original extracted firmware or a flash dump directly from the Router ROM. From our point of view the **romfile.cfg** is unencrypted and we can view the contents of it directly.
 
   <img src="{{ site.baseurl }}/assets/images/RE/2022-11-16_01-56.png">
 
-Theoritical point of view; Under the path of **/userfs/romfile.cfg** there's our file, grepping the file and viewing it's contents we can assume that the credentials embedded there are the web panels basic auth credentials.
+Theoritical point of view; Under the path of **/userfs/romfile.cfg** there's our file, grepping the file and viewing it's contents we can assume that the credentials embedded there, are the web panels basic auth credentials.
 
 
 Command : 
@@ -80,18 +80,18 @@ Command :
 
         <Entry0 username="admin" web_passwd="poqv7069"
 
-But testing them on the Basic Auth web panel of the router shows that they're incorrect which is kinda odd; Because clearly it states that the credentials are for **web_passwd** entry. Never the less after some time trying to make sense of it i tried to approach it with a different methodology. Instead  we can just tweak some mechanisms to work for our advantage in order to access the router web portal without breaking the Basic Authentication module.
+But testing them on the Basic Auth web panel of the router shows that they are incorrect which is kinda odd; Because clearly it states that the credentials are for **web_passwd** entry. Nevertheless after some time trying to make sense of it i tried to approach it with a different methodology. Instead  we can just tweak some mechanisms to work for our advantage in order to access the router web portal without breaking the Basic Authentication module.
 
 
 # What is Βoa
 {:.no_toc}
 
-A little bit information about boa, Boa is a discontinued since 2005 open-source small-footprint web server that is suitable for embedded applications. To simplify  things up it's just a web based client which serves basic content with minimal security policies.
+Some information about boa, Boa is a discontinued since 2005 open-source small-footprint web server that is suitable for embedded applications. To simplify  things up it's just a web based client which serves basic content with minimal security policies.
 
 # Debugging Boa Configuration
 {:.no_toc}
 
-Now that we're inside the Router environment we can take a look how Boa is being executed and what configuration does it parses, to do that we're gonna list our current processes and grep through our way to locate Boa process.
+Now that we're inside the Router environment we can take a look at how Boa is being executed and what configuration does it parses, to do that we're gonna list our current processes and grep through our way to locate Boa process.
 
 On the router shell environment let's execute the below command : 
 
@@ -100,7 +100,7 @@ On the router shell environment let's execute the below command :
 
   <img src="{{ site.baseurl }}/assets/images/RE/2022-11-16_15-53.png">
 
-  As it suggests Boa seems to use the config under the /boaroot and is being executed with the flag of **-d** which suggests that it instruct Boa not to fork itself (non-daemonize). Taking a look at the boa configuration we can see that  the basic Authorization is being parsed via **/etc/passwd**
+  As it suggests Boa seems to use the config under the /boaroot and is being executed with the flag of **-d** which suggests that it instructs Boa not to fork itself (non-daemonize). Taking a look at the boa configuration we can see that  the basic Authorization is being parsed via **/etc/passwd**
 
     # Auth: HTTP Basic authorization. Format is "Auth <Directory> <PasswdFile>".
     # Password file should be readable _ONLY_ by root or trusted user(s). This file
@@ -126,7 +126,7 @@ On the router shell environment let's execute the below command :
 
   <img src="{{ site.baseurl}}/assets/images/RE/2022-11-16_16-18.png">
 
-  Now recaping back, we know Boa http server parses the basic authentication based on the **/etc/passwd**. Previously we didn't know the password, but  now we do let's see if Boa re-checked the **/etc/passwd** and refreshed his configuration with our newly created password, so let's go back to the router Web Panel and input the **username** and **password**
+  Now recaping back, we know Boa http server parses the basic authentication based on the **/etc/passwd**. Previously we didn't know the password, but  now we do. Let's see if Boa re-checked the **/etc/passwd** and refreshed his configuration with our newly created password, so let's go back to the router Web Panel and input the **username** and **password**
 
   <img src="{{ site.baseurl }}/assets/images/RE/2022-11-16_16-28.png">
 
@@ -146,4 +146,4 @@ On the router shell environment let's execute the below command :
 # Summary
 {:.no_toc}
 
-We've successfully emulated our router firmware using out of the box tools, perfomred dynamic analysis inside the emulated running state of the firmware. Thinked outside of the box techniques and applied them to tinker with mechanisms and finally getting access inside the Router Web Portal. On <a href="Part[3]" > Part[ 3 ]</a> we will be talking on how we can find and analyse vulnerabilities or who knows fuzzing for some Bofs too;
+We've successfully emulated our router firmware using out of the box tools, performed dynamic analysis inside the emulated running state of the firmware. Thinked outside of the box techniques and applied them to tinker with mechanisms and finally getting access inside the Router Web Portal. On <a href="Part[3]" > Part[ 3 ]</a> we will be talking on how we can find and analyse vulnerabilities or who knows fuzzing for some Bofs too;
