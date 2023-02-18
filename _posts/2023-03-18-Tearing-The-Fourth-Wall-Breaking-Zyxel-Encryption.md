@@ -240,6 +240,7 @@ And that's the extracted version by using the password that we recovered from th
 And now we can export entirely the **"compress.img"** which is the plaintext firmware binary and analyse it locally for vulnerabilities.
 
 
+<img src="{{ site.baseurl }}/assets/images/RE/Zyxel/my-job-here-is-done-bye.gif">
 
 # Bonus
 
