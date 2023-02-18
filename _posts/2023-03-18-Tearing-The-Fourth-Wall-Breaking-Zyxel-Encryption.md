@@ -225,7 +225,7 @@ The binary that calculates the ZIP password is statically compiled, therefore it
 
 # Extracting the Plaintext Firmware
 
-Now that we have access to the plaintext filesystem, we can hook up the **"473AAAB0C0.bin"** inside Ghidra  using the password that we got from the strace syscalls we can export the firmware.
+Now that we have access to the plaintext filesystem, we can hook up the **"473AAAB0C0.bin"** inside Ghidra  using the password that we got from the strace syscalls and export the firmware locally.
 
 Here's how Ghidra requests us for the password : 
 
