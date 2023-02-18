@@ -101,7 +101,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 7085884       0x6C1F3C        ASCII cpio archive (SVR4 with no CRC), file name: "zyinit/zld_fsextract", file name length: "0x00000015", file size: "0x00017098"
 ```
 
-What interested us the most are the files of :
+What interests us the most are the files of :
 
 ```zsh
 7085764       0x6C1EC4        ASCII cpio archive (SVR4 with no CRC), file name: "zyinit", file name length: "0x00000007", file size: "0x00000000"
