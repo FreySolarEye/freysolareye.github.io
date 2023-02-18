@@ -257,7 +257,7 @@ The validation checks whenever the applied user is not in the UUID 0 which sugge
 {:.no_toc}
 
 1. Encrypted firmwares can be reversed back to their plaintext version, you just need a brain for it
-2. Static and Dynamic analysis play a huge role on the recovery process
+2. Static and Dynamic analysis play a huge role in the recovery process
 3. Always search for string patterns in the binaries, they contain huge information for the underlying system
 
 
