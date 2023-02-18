@@ -48,7 +48,7 @@ If you downloaded the abovementioned version you'll find yourself with a file na
 
 # Signature Checks & Validation
 
-To begin with we need to understand that we're dealing with the  encrypted binary **473AAAB0C0.bin**  To be able to tell what's the encryption and file type we need to examine carefully the starting Hex Bytes, and validate them with the file type signature list. Using hexeditor on the **473AAAB0C0.bin** file we have the below starting Hex Bytes : **50 4B 03 04** looking them on the file type signature list here : <a href='https://en.wikipedia.org/wiki/List_of_file_signatures' target="_blank" > Signature<a/> concludes that the file type is PK which is 7z compressed file type.
+To begin with we need to understand that we're dealing with the  encrypted binary **473AAAB0C0.bin**  To be able to tell what's the encryption and file type we need to examine carefully the starting Hex Bytes, and validate them with the file type signature list. Using hexeditor on the **473AAAB0C0.bin** file we have the below starting Hex Bytes : **50 4B 03 04** looking them on the signature list here : <a href='https://en.wikipedia.org/wiki/List_of_file_signatures' target="_blank" > Signature<a/> concludes that the file type is PK which is 7z compressed file type.
 
 <img src="/assets/images/RE/Zyxel/ZY_Signature.png">
 
