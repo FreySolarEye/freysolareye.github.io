@@ -249,8 +249,7 @@ Seems like that the Zyxel hides some underlying users, but there's a check betwe
 
 <img src="{{ site.baseurl }}/assets/images/RE/Zyxel/ZY_DEFAULT_PW.png">
 
-The validation checks whenever the applied user is not in the UUID 0 which suggests that the admin account at **"pcVar27"** has full privileges over the system.
-
+The validation checks whether the applied user is in the UUID 0, which suggests that the admin account at **"pcVar27"** has full privileges over the system.
 
 
 
