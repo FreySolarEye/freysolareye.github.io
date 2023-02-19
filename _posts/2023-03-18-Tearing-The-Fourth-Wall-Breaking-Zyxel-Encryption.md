@@ -11,7 +11,7 @@ toc_sticky: false
 toc_label: "Table of Contents"
 ---
 
-During a web application penetration test assessment for a client, I came across a Zyxel ZyWall 310 web portal. At the time, I couldn’t exploit it, nor could I find any weaknesses in it, but for some reason, it stuck in my head. I thought that I wanted to poke around and dissect the firmware. This blog describes my train of thought, how I approached it, and what techniques I applied to bypass the encryption mechanism of the stock firmware to get the uncompressed version of it. As far as I know, this topic has been analyzed in plenty of research papers already. Shout out to **@jaylagorio** and **@Dr Amir Mehmood** for the awesome research they’ve done so far.
+During a Web App Penetration Test assessment for a client, I came across a Zyxel ZyWall 310 Web Portal. At the time, I couldn’t exploit it nor could I find any weaknesses on it, but for some reason, it stuck in my head, and I thought that I want to poke around and dissect the firmware. This blog describes my train of thought and how I approached it, and what techniques I applied to bypass the encryption mechanism of the stock firmware to get the uncompressed version of it. As far as I know, this topic has been analyzed in plenty of research papers already. Shout out to **@jaylagorio** and **@Dr Amir Mehmood** for the awesome research they’ve done so far.
 
 # Disclaimer 
 {:.no_toc}
@@ -38,7 +38,7 @@ Download Link : <a href='https://portal.myzyxel.com/my/firmwares?fw_version=4.73
 # Firmware Contents 
 {:.no_toc}
 
-If you downloaded the abovementioned version you'll find yourself with a file named **firmware.zip** unzipping it  unveils the below files :
+If you downloaded the aforementioned version, you’ll find yourself with a file named firmware.zip. Unzipping it unveils the below files:
 
 <img src="/assets/images/RE/Zyxel/ZY_FILES.png">
 
@@ -49,7 +49,7 @@ To begin with we need to understand that we're dealing with the  encrypted binar
 
 <img src="/assets/images/RE/Zyxel/ZY_Signature.png">
 
-Now if someone tries to actually unzip the **473AAAB0C0.bin** a pop up will occur asking the users to input the password.
+Now if someone tries to actually unzip the **473AAAB0C0.bin** a pop-up will occur asking the users to input the password.
 
 
 # Static Analysis 
