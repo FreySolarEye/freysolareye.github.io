@@ -117,7 +117,7 @@ I've loaded the binary into Ghidra just to analyze the routine as it states belo
 
 <img src="/assets/images/RE/Zyxel/ZY_INSTRUCT.png">
 
-Taking note, the procedure starts at the instruction code **10006ffc** and ends at **10007010**. The mnemonic used is "bal" (ARM - Branch and Link Instruction), which is used to call a function and move the link register to the PC (MOV PC, LR) to return from a function. In our case, the function being called is FUN_10025568, which is the exit loop of the sequential order of the IF statement.
+Taking note, the procedure starts at the instruction code **10006ffc** and ends at **10007010**. The mnemonic used is "bal" (ARM - Branch and Link Instruction), which is used to call a function and move the link register to the PC (MOV PC, LR) to return from a function. In our case, the function being called is **FUN_10025568**, which is the exit loop of the sequential order of the IF statement.
 
 <img src="/assets/images/RE/Zyxel/ZY_BAL.png">
 
