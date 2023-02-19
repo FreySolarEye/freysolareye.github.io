@@ -208,11 +208,11 @@ Executing the binary proves that the emulation works and the binary executes wit
 <img src="{{ site.baseurl }}/assets/images/RE/Zyxel/ZY_EMU.png">
 
 
-Now that we're set we can perform an one-liner mips emulator with strace to execute the binary parse the **"473AAAB0C0.bin"** and review all the syscalls that it made till the exit loop.
+Now that we're set, we can perform a one-liner MIPS emulator with strace to execute the binary, parse the **"473AAAB0C0.bin"**, and review all the syscalls that it made till the exit loop.
 
-I made a directory called **"Emulation"** which consists of the following needed files : **"473AAAB0C0.bin"**, **"zld_fsextract"**, **"debian_wheezy_mips_standard.qcow2"**, **"vmlinux-3.2.0-4-5kc-malta"**
+I made a directory called "Emulation" which consists of the following needed files: **"473AAAB0C0.bin"**, **"zld_fsextract"**, **"debian_wheezy_mips_standard.qcow2"**, **"vmlinux-3.2.0-4-5kc-malta"**.
 
-After seeing that the process worked correctly with a fully emulated environment, i decided  to try the single binary emulation provided by qemu. By using **"strace"** we can quickly see how the **"unzip"** binary was launched to find the ZIP password.
+After seeing that the process worked correctly with a fully emulated environment, I decided to try the single binary emulation provided by qemu. By using **"strace"**, we can quickly see how the "unzip" binary was launched to find the ZIP password.
 
 ```zsh
 sudo strace -f -s 199 qemu-mipsn32 ./zld_fsextract ./473AAAB0C0.bin  ./unzip -s extract -e code
