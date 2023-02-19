@@ -11,7 +11,7 @@ toc_sticky: false
 toc_label: "Table of Contents"
 ---
 
-During a Web App Penetration Test assessment for a client, I came across a Zyxel ZyWall 310 Web Portal. At the time, I couldn’t exploit it nor could I find any weaknesses on it, but for some reason, it stuck in my head, and I thought that I want to poke around and dissect the firmware. This blog describes my train of thought and how I approached it, and what techniques I applied to bypass the encryption mechanism of the stock firmware to get the uncompressed version of it. As far as I know, this topic has been analyzed in plenty of research papers already. Shout out to **@jaylagorio** and **@Dr Amir Mehmood** for the awesome research they’ve done so far.
+During a Web App Penetration Test assessment for a client, I came across a Zyxel ZyWall 310 Web Portal. At the time, I couldn’t exploit it nor could I find any weaknesses on it, but for some reason it stuck in my head, and I thought that I want to poke around and dissect the firmware. This blog describes my train of thought and how I approached it, and what techniques I applied to bypass the encryption mechanism of the stock firmware to get the uncompressed version of it. As far as I know, this topic has been analyzed in plenty of research papers already. Shout out to **@jaylagorio** and **@Dr Amir Mehmood** for the awesome research they’ve done so far.
 
 # Disclaimer 
 {:.no_toc}
