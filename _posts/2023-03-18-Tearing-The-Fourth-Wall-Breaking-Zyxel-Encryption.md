@@ -264,4 +264,4 @@ The validation checks whether the applied user is in the UUID 0, which suggests 
 # Summary
 {:.no_toc}
 
-We've successfully performed  static and dynamic analysis to evaluate the flow chart, patterns and how the code works in general, decrypted on the fly the encrypted binary by abusing vendor applied tools listed on the binary itself. Finally we  exported the **"compress.img"** which was the plaintext binary all along. 
+We have successfully performed static and dynamic analysis to evaluate the flow chart, patterns, and how the code works in general. We decrypted the encrypted binary on the fly by abusing the vendor-applied tools listed in the binary itself. Finally, we exported the "compress.img," which was the plaintext binary all along.
