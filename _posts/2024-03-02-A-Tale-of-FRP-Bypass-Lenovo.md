@@ -65,9 +65,20 @@ img src="/assets/images/IoT/Unlocked_Device.jpg">
 
 # Timeline of disclosure to vendor
 
-04/01/2024: The vendor was contacted with a full PoC and a demo video demonstrating the FRP Bypass
-05/01/2024: Added additional details to the vendor for a better explanation of the attack surface; by including the android version and software version
-05/01/2024: The vendor contacted and aknoledged the vulnerability, and initiated the process to the development team of Lenovo
-17/01/2024: Contacted the vendor for an updated related to the FRP
-17/01/2024: The vendor replied by saying that the issue is tracked as LEN-150690
-03/02/2024: The vendor updates me with the status of the vulnerability and informed me that the software version has reached EOL and it does not support any kind of update. As per vendor saying, currently supported tablets do not allow the sharing of text before the EULA is accepted, preventing the attack surface for FRP bypass on these devices.
+04/01/2024: The vendor was formally contacted, presenting a comprehensive Proof of Concept (PoC) alongside a demonstration video elucidating the FRP Bypass.
+
+05/01/2024: Additional intricacies pertaining to the attack surface were furnished to the vendor, encompassing specific details such as the Android version and software version for a more thorough understanding.
+
+05/01/2024: Subsequent to the provision of information, the vendor was contacted again and duly acknowledged the identified vulnerability. They proceeded to initiate communication with the development team at Lenovo.
+
+17/01/2024: A follow-up communication was established with the vendor seeking an update concerning the FRP (Factory Reset Protection).
+
+17/01/2024: The vendor responded, stipulating that the issue has been registered and is being tracked under the identifier LEN-150690.
+
+03/02/2024: In response to a subsequent inquiry, the vendor communicated the current status of the vulnerability. Furthermore, it was conveyed that the software version in question has reached its End of Life (EOL) and consequently, no longer supports updates. The vendor explicated that tablets presently under active support do not permit the sharing of text before the End User License Agreement (EULA) is accepted, effectively mitigating the potential attack surface for FRP bypass on these devices.
+
+03/02/2024: The vendor approved the full disclosure of the vulnerability with a blog post
+
+# CVE Assign
+
+Status : Waiting for CVE ID
