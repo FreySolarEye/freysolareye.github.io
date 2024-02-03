@@ -1,6 +1,6 @@
 ---
 title: "A Tale of FRP Bypass - Lenovo"
-date: "2024-03-02"
+date: "2024-02-03"
 header:
   teaser: /assets/images/RE/IoT_Base.png
   teaser_home_page: true
@@ -54,12 +54,12 @@ The outcome was complete unrestricted access to the device itself; Thus, bypassi
 
 How it began: 
 
-img src="/assets/images/IoT/FRP_Locked_Device.jpg">
+<img src="/assets/images/IoT/FRP_Locked_Device.jpg">
 
 
 How it ended:
 
-img src="/assets/images/IoT/Unlocked_Device.jpg">
+<img src="/assets/images/IoT/Unlocked_Device.jpg">
 
 
 
