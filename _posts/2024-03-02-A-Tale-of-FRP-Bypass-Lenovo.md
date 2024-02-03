@@ -77,7 +77,7 @@ How it ended:
 
 03/02/2024: In response to a subsequent inquiry, the vendor communicated the current status of the vulnerability. Furthermore, it was conveyed that the software version in question has reached its End of Life (EOL) and consequently, no longer supports updates. The vendor explicated that tablets presently under active support do not permit the sharing of text before the End User License Agreement (EULA) is accepted, effectively mitigating the potential attack surface for FRP bypass on these devices.
 
-03/02/2024: The vendor approved the full disclosure of the vulnerability with a blog post
+03/02/2024: The vendor approved the full disclosure of the vulnerability with a blog post.
 
 # CVE Assign
 
