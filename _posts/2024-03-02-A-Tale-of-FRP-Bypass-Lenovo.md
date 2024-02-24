@@ -47,12 +47,9 @@ Proceeding to the Applications and Notifications section, the user can disable b
 
 Before clicking the Offline Setup, a revisit to the Lenovo EULA is required. Within the SMS of the previously created group, a prompt emerges, indicating that Google Play Services must be enabled for use. Following this directive, the user re-engages with the EULA menu, proceeds with the installation, and intercepts the "Your Device is getting ready" message. A double-tap facilitates a return to the Wi-Fi option, allowing the user to execute the "Set Up Offline" process. This method successfully circumvents FRP, as Google Services were enabled, and the setup transitioned seamlessly through the offline installation, eliminating the association with the previous email owner who had synchronized the device, thus bypassing the FRP completely. 
 
-# Patching Notes
-
-
-As per Lenovo PSIRT, they have determined that it was an Android feature that allowed users to copy and share EULA text. Back in 2021, Android realized this could lead to security issues, and provided OEMs with an API to disable the feature. Currently supported Lenovo tablets (those launched after 2021) do not allow users to copy and share text at the EULA screen and are therefore not vulnerable. The device of "Lenovo TB-X505L" was EOL when the fix from Android was released, and therefore it was not patched.
 
 # The outcome
+{:.no_toc}
 
 The outcome was complete unrestricted access to the device itself; Thus, bypassing the FRP and unlocking it completely.
 
@@ -67,8 +64,14 @@ How it ended:
 <img src="/assets/images/IoT/Unlocked_Device.jpg">
 
 
+# Patching Notes
+{:.no_toc}
+
+As per Lenovo PSIRT, they have determined that it was an Android feature that allowed users to copy and share EULA text. Back in 2021, Android realized this could lead to security issues, and provided OEMs with an API to disable the feature. Currently supported Lenovo tablets (those launched after 2021) do not allow users to copy and share text at the EULA screen and are therefore not vulnerable. The device of "Lenovo TB-X505L" was EOL when the fix from Android was released, and therefore it was not patched.
+
 
 # Timeline of disclosure to vendor
+{:.no_toc}
 
 <b>04/01/2024</b>: The vendor was formally contacted, presenting a comprehensive Proof of Concept (PoC) alongside a demonstration video elucidating the FRP Bypass.
 
