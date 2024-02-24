@@ -39,7 +39,18 @@ FRP functions as a deterrent against theft and unauthorized use by discouraging 
 {:.no_toc}
 
 
-Waiting for Lenovo Development Team approval, REF Ticket : LEN-150690
+A brief explanation of the bypass mechanism and its operational process is as follows: Upon the initial boot-up of the phone, when encountering Factory Reset Protection (FRP), the Lenovo End User License Agreement (EULA) is presented, necessitating user acceptance. However, an exploitable vulnerability arises when a user highlights and attempts to share the EULA text via Short Message Service (SMS). Utilizing the SMS option, a user can create a group, subsequently entering a random contact number for SMS transmission.
+
+Within the SMS input, an individual can hover over to the Location feature. Clicking the location button triggers a request for permission activation. Upon consenting to the permission prompt, the user is redirected to the Location Application settings. Here, one can search for other applications, specifically targeting the "settings" keyword. This search yields the Settings Application button, enabling unrestricted access to the phone's settings and bypassing integrity controls.
+
+Proceeding to the Applications and Notifications section, the user can disable both "Android Setup" and "Google Play Services" while also clearing the cache. Following these steps, the user returns to the Setup menu, continues with the process, and identifies the point where the message "Your device is getting ready" is displayed. Swiftly transitioning back to the Wi-Fi options, the user locates the Offline "Set Up Offline" option.
+
+Before clicking the Offline Setup, a revisit to the Lenovo EULA is required. Within the SMS of the previously created group, a prompt emerges, indicating that Google Play Services must be enabled for use. Following this directive, the user re-engages with the EULA menu, proceeds with the installation, and intercepts the "Your Device is getting ready" message. A double-tap facilitates a return to the Wi-Fi option, allowing the user to execute the "Set Up Offline" process. This method successfully circumvents FRP, as Google Services were enabled, and the setup transitioned seamlessly through the offline installation, eliminating the association with the previous email owner who had synchronized the device, thus bypassing the FRP completely. 
+
+# Patching Notes
+
+
+As per Lenovo PSIRT, they have determined that it was an Android feature that allowed users to copy and share EULA text. Back in 2021, Android realized this could lead to security issues, and provided OEMs with an API to disable the feature. Currently supported Lenovo tablets (those launched after 2021) do not allow users to copy and share text at the EULA screen and are therefore not vulnerable. The device of "Lenovo TB-X505L" was EOL when the fix from Android was released, and therefore it was not patched.
 
 # The outcome
 
@@ -72,6 +83,8 @@ How it ended:
 <b>03/02/2024</b>: In response to a subsequent inquiry, the vendor communicated the current status of the vulnerability. Furthermore, it was conveyed that the software version in question has reached its End of Life (EOL) and consequently, no longer supports updates. The vendor explicated that tablets presently under active support do not permit the sharing of text before the End User License Agreement (EULA) is accepted, effectively mitigating the potential attack surface for FRP bypass on these devices.
 
 <b>09/02/2024</b>: The vendor was contacted to give permissions for a public blog post, waiting  for approval.
+
+<b>23/02/2024</b>: Lenovo PSIRT gave the permission for publication, by including some extra information about the patching process.
 
 
 # CVE Assign
