@@ -1,6 +1,6 @@
 ---
 title: "A Tale of FRP Bypass - Lenovo"
-date: "2024-02-03"
+date: "2024-02-24"
 header:
   teaser: /assets/images/RE/IoT_Base.png
   teaser_home_page: true
