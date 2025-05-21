@@ -1,0 +1,15 @@
+--2025-05-21 10:53:06--  https://unit42.paloaltonetworks.com/wp-content/uploads/2022/08/word-image-91.png
+Resolving unit42.paloaltonetworks.com (unit42.paloaltonetworks.com)... 104.102.56.133
+Connecting to unit42.paloaltonetworks.com (unit42.paloaltonetworks.com)|104.102.56.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 210272 (205K) [image/png]
+Saving to: ‘word-image-91.png’
+
+     0K .......... .......... .......... .......... .......... 24%  847K 0s
+    50K .......... .......... .......... .......... .......... 48%  885K 0s
+   100K .......... .......... .......... .......... .......... 73% 2.08M 0s
+   150K .......... .......... .......... .......... .......... 97% 3.35M 0s
+   200K .....                                                 100% 9.95T=0.2s
+
+2025-05-21 10:53:06 (1.31 MB/s) - ‘word-image-91.png’ saved [210272/210272]
+
