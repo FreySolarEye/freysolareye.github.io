@@ -2,7 +2,7 @@
 title: "Inside APT36’s Pocket: Reverse Engineering Android Spyware Using WebSocket & AES Exfiltrations"
 date: "2025-07-20"
 header:
-  teaser: /assets/images/anonymity/anonymity.jpg
+  teaser: /assets/images/malware/apt.jpg
   teaser_home_page: true
 tags: reversing,malware
 categories: reversing,malware
