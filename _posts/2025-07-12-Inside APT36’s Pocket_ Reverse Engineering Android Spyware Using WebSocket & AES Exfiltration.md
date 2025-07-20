@@ -626,7 +626,7 @@ You can tell some of these folks write consumer apps on the side. They used OkHt
 
 This isn’t your usual malware written in barely-patched Android Studio. This is someone who’s published on the Play Store...
 
-### 8.7 Encryption PAd Strategy: Down to the rabbit hole
+### 8.7 Encryption Pad Strategy: Down to the rabbit hole
 
 Their padding logic in AES encryption just... slaps zeroes onto the string until it fits the block size.
 
