@@ -135,7 +135,7 @@ Let’s break down the malware’s startup sequence together, notice how it bala
 
 - The constructed `Intent` starts `MainService`, but here’s the twist:
 - Persistence Module: Initializes immediately, pinging every `10` seconds (aggressive for a `"legit"` app).
-- Delay Tactics: The service doesn’t stop the activity `(finish()` is intentionally missing), keeping the UI minimal to avoid suspicion.
+- Delay Tactics: The service doesn’t stop the activity `(finish() is intentionally missing)`, keeping the UI minimal to avoid suspicion.
 - Thought process: "If we don’t close the activity, the app looks inactive, but the service keeps running in the background."
 
 **Context Matters - Avoiding Pitfalls**
@@ -204,7 +204,7 @@ Looking at MainService, it’s obvious this class is the heart of the malware. I
 
 It's designed to `persist`, hide itself using a `foreground service`, and communicate silently with a `C2 server`. This is a "classic" spyware with modular, stealthy, and persistent capabilities. From here on out, we can say with 100% confidence and maybe a little dramatic flair that this thing is definitely up to no good. Yep, it’s malware, no doubt about it like we didn't really see more suspicious activities up ahead....
 
-- `MainService` extens `service` and overrides `onStartCommand()`.
+- `MainService` extends `service` and overrides `onStartCommand()`.
 - Uses `Handler.postDelayed()` loop, which ensures `constant background execution`.
 - Sets up a **Socket.IO listener** in `"order"` to receive remote commands.
 
@@ -639,6 +639,64 @@ str = str + (char) 0;
 No PKCS#7, no cleverness. Just throw some zeroes at it and hope nobody notices.
 
 
-## 9.0 Conclusion
+## 9.0 APT36 Threat Actor Profile
+
+APT36 (aka Transparent Tribe, Mythic Leopard) is a **Pakistan-aligned state-sponsored threat actor** active since at least **2013**. This group is known for cyber-espionage operations targeting Indian military, government, and diplomatic sectors, along with educational institutions and think tanks. They’ve expanded operations to Android and Linux platforms over the years.
+
+---
+
+### 9.1 Motivation
+- Espionage
+- Intelligence collection on regional rivals
+
+### 9.2 Target Countries
+
+- India
+- Afghanistan
+
+### 9.3 Target Sectors
+
+- Government
+- Military
+- Aerospace
+- Education
+
+---
+
+### 9.4 Known Tools & Malware
+
+| Tool              | Platform | Description |
+|------------------|----------|-------------|
+| **Crimson RAT**  | Windows  | Custom remote access trojan |
+| **ElizaRAT**     | Windows  | .NET RAT using Google Drive & Telegram |
+| **BOSS Malware** | Linux    | Uses `.desktop` file trickery |
+| **Android Implant** | Android | Modular spyware w/ WebSocket C2, Telegram, Google Drive |
+
+---
+
+### 9.5  Infrastructure & Delivery
+- Domains: `vebhost[.]com`, `zainhosting[.]net`, `drive-phone[.]online` etc.
+- Hosting: DigitalOcean
+- Cloud: Google Drive, Telegram Bots
+- Delivery: Spearphishing emails, malicious Android APKs
+
+<p align="center">
+  <img src="/assets/images/malware/figure28.png" alt="Code Snippet: " width="1000"/>
+</p>
+<p align="center"><strong>Figure 28.</strong> APT36 Infrastructure Graph </p>
+
+---
+
+### 9.6  Tactics, Techniques & Procedures (TTPs)
+
+| Technique         | ID         | Description                    |
+|------------------|------------|--------------------------------|
+| Spearphishing Attachment | T1566.001 | Malicious email attachments |
+| Valid Accounts    | T1078      | Use of stolen credentials     |
+| Masquerading      | T1036      | Obfuscation & impersonation   |
+
+---
+
+## 10. Conclusion
 
 This malware is a weird mix of competence and corner-cutting. It’s got clean architecture, some surprising stealth, and modern development practices. But it’s also riddled with OPSEC failures, questionable cryptography, and network decisions that practically beg for detection. From an analyst’s lens, that’s what makes it so interesting. Not the code itself but what the code reveals about the people behind it. Skilled, fast-moving, maybe under pressure, and not as invincible as they’d like you to think.
