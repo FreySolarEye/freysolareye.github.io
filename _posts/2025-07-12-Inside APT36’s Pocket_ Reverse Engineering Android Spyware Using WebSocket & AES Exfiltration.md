@@ -674,14 +674,16 @@ APT36 (aka Transparent Tribe, Mythic Leopard) is a **Pakistan-aligned state-spon
 
 ---
 
+
 ### 9.5  Infrastructure & Delivery
+
 - Domains: `vebhost[.]com`, `zainhosting[.]net`, `drive-phone[.]online` etc.
 - Hosting: DigitalOcean
 - Cloud: Google Drive, Telegram Bots
 - Delivery: Spearphishing emails, malicious Android APKs
 
 <p align="center">
-  <img src="/assets/images/malware/figure28.png" alt="Code Snippet: " width="1000"/>
+  <img src="/assets/images/malware/figure28.png" alt="Infrastructure Graph" width="1000"/>
 </p>
 <p align="center"><strong>Figure 28.</strong> APT36 Infrastructure Graph </p>
 
