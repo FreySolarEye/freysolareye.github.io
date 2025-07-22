@@ -19,7 +19,7 @@ In this technical research paper, we dissect a mobile spyware strain targeting A
 
 This research was conducted by **Frey** and **parad0x**, two independent security researchers with a shared interest in malware analysis and reverse engineering. 
 
-- **Frey** works professionally in penetration testing, with a background in incident response and threat intelligence. Outside of work, he focuses on vulnerability research, malware analysis, and reverse engineering as a hobby.
+- **Frey** works professionally in penetration testing, with a background in incident response and threat intelligence.
 
 - **parad0x** is a dedicated reverse engineer and malware researcher with a strong focus on Android malware. Specializing in software code analysis and internal weird code patterns.
 
