@@ -693,7 +693,7 @@ APT36 (aka Transparent Tribe, Mythic Leopard) is a **Pakistan-aligned state-spon
 
 | Technique         | ID         | Description                    |
 |------------------|------------|--------------------------------|
-| Spearphishing Attachment | T1566.001 | Malicious email attachments |
+| Spearphishing Attachment | T1566 | Malicious email attachments |
 | Valid Accounts    | T1078      | Use of stolen credentials     |
 | Masquerading      | T1036      | Obfuscation & impersonation   |
 
