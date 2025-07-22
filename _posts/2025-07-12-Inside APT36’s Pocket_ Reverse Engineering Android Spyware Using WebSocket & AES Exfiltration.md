@@ -21,7 +21,7 @@ This research was conducted by **Frey** and **parad0x**, two independent securit
 
 - **Frey** works professionally in penetration testing, with a background in incident response and threat intelligence.
 
-- **parad0x** is a dedicated reverse engineer and malware researcher with a strong focus on Android malware. Specializing in software code analysis and internal weird code patterns.
+- **parad0x** is a dedicated reverse engineer with involved in malware research.
 
 
 ## 1. Research Modus-Operandi?
